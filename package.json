@@ -1,0 +1,27 @@
+{
+  "name": "harp-browserify",
+  "version": "0.0.1",
+  "description": "A harp boilerplate with browserify",
+  "main": "app.js",
+  "scripts": {
+    "start": "harp server public & watchify app/index.js -o public/build/bundle.js -dv",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kevinsimper/harp-browserify.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinsimper/harp-browserify/issues"
+  },
+  "homepage": "https://github.com/kevinsimper/harp-browserify",
+  "dependencies": {
+    "jquery": "^2.1.1"
+  },
+  "devDependencies": {
+    "harp": "^0.13.0",
+    "watchify": "^1.0.2"
+  }
+}
