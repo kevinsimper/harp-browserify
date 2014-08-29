@@ -4,9 +4,11 @@
   "description": "A harp boilerplate with browserify",
   "main": "app.js",
   "scripts": {
-    "postinstall": "mkdir public/build",
-    "start": "harp server public & watchify app/index.js -o public/build/bundle.js -dv",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-js": "browserify public/index.js -o public/bundle.js",
+    "watch-js": "watchify public/index.js -o public/bundle.js -dv",
+    "start": "harp server & npm run watch-js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "npm run build-js && harp compile"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,7 @@
     "jquery": "^2.1.1"
   },
   "devDependencies": {
+    "browserify": "~5.11.0",
     "harp": "^0.13.0",
     "watchify": "^1.0.2"
   }
