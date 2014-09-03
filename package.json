@@ -4,7 +4,7 @@
   "description": "A harp boilerplate with browserify",
   "main": "app.js",
   "scripts": {
-    "postinstall": "mkdir public/build",
+    "postinstall": "mkdir -p public/build",
     "start": "harp server public & watchify app/index.js -o public/build/bundle.js -dv",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
